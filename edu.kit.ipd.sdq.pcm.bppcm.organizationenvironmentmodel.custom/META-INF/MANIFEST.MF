@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: IntBIISExternalActions
+Bundle-SymbolicName: edu.kit.ipd.sdq.pcm.bppcm.organizationenvironmentmodel.custom;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: edu.kit.ipd.sdq.pcm.bppcm.sirius.externalactions.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.sirius;bundle-version="3.1.2",
+ org.palladiosimulator.pcm;bundle-version="4.0.0",
+ org.eclipse.sirius.diagram;bundle-version="3.1.2"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Import-Package: de.uhd.ifi.se.pcm.bppcm.organizationenvironmentmodel,
+ org.eclipse.sirius.ui.tools.api;version="3.0.0"

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="organizationenvironmentmodel" version="10.1.0.201507271600">
+  <ownedViewpoints name="organizationEnvironment" modelFileExtension="organizationenvironmentmodel">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="OrganizationEnvironmentModel" initialisation="true" domainClass="organizationenvironmentmodel.OrganizationEnvironmentModel" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="RoleNode" labelDirectEdit="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:roles" domainClass="organizationenvironmentmodel.Role">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:entityName" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/edu.kit.ipd.sdq.pcm.bppcm.sirius/icons/role.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="DeviceNode" labelDirectEdit="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:deviceResources" domainClass="organizationenvironmentmodel.DeviceResource">
+          <style xsi:type="style:WorkspaceImageDescription" showIcon="false" labelExpression="feature:entityName" labelAlignment="RIGHT" sizeComputationExpression="-1" resizeKind="NSEW" workspacePath="/edu.kit.ipd.sdq.pcm.bppcm.sirius/icons/DeviceResource.png">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="roleEdge" deletionDescription="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@toolSections.0/@ownedTools[name='Unset%20Role']" sourceMapping="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@containerMappings[name='ActorContainer']" targetMapping="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@nodeMappings[name='RoleNode']" targetFinderExpression="feature:roles">
+          <style targetArrow="NoDecoration">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription showIcon="false">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <containerMappings name="ActorContainer" labelDirectEdit="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:actorResources" domainClass="ActorResource" childrenPresentation="List">
+          <subNodeMappings name="WorkingPeriod" labelDirectEdit="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@toolSections.0/@ownedTools[name='editWorkingPeriod']" semanticCandidatesExpression="feature:workingPeriods" domainClass="organizationenvironmentmodel.WorkingPeriod">
+            <style xsi:type="style:SquareDescription" labelExpression="aql:self.periodStartTimePoint.toString().substitute('.', ':')+' - '+self.periodEndTimePoint.toString().substitute('.', ':')" iconPath="/edu.kit.ipd.sdq.pcm.bppcm.sirius/icons/WorkingPeriod.png" tooltipExpression="WorkingPeriod" labelPosition="node" resizeKind="NSEW" width="15" height="3">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelExpression="feature:entityName" iconPath="/edu.kit.ipd.sdq.pcm.bppcm.sirius/icons/ActorResource.png" widthComputationExpression="20" heightComputationExpression="10">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <toolSections name="Element Creation">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Role" nodeMappings="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@nodeMappings[name='RoleNode']" iconPath="/edu.kit.ipd.sdq.pcm.bppcm.sirius/icons/Role-icon.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="organizationenvironmentmodel.Role" referenceName="roles">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="entityName" valueExpression="aql:'role'+container.roles->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Create Device" nodeMappings="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@nodeMappings[name='DeviceNode']" iconPath="/edu.kit.ipd.sdq.pcm.bppcm.sirius/icons/DeviceResource-icon.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="organizationenvironmentmodel.DeviceResource" referenceName="deviceResources">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="entityName" valueExpression="aql:'device'+container.deviceResources->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="Unset Role">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="DeleteActorRoleRelation" id="DeleteActorRoleRelation">
+                <parameters name="elementView" value="[elementView/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="Set Role" edgeMappings="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@edgeMappings[name='roleEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="roles" valueExpression="var:target"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editName">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:SetValue" featureName="entityName" valueExpression="var:0"/>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:ContainerCreationDescription" name="Create Actor" containerMappings="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@containerMappings[name='ActorContainer']" iconPath="/edu.kit.ipd.sdq.pcm.bppcm.sirius/icons/ActorResource.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="organizationenvironmentmodel.ActorResource" referenceName="actorResources">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="entityName" valueExpression="aql:'actor'+container.actorResources->size()"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Add Working Period" nodeMappings="//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@containerMappings[name='ActorContainer']/@subNodeMappings[name='WorkingPeriod']" iconPath="/edu.kit.ipd.sdq.pcm.bppcm.sirius/icons/WorkingPeriod.png">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:container">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="organizationenvironmentmodel.WorkingPeriod" referenceName="workingPeriods"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DirectEditLabel" name="editWorkingPeriod">
+            <mask mask="{0}"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ExternalJavaAction" name="edit" id="ProcessWorkingPeriod">
+                <parameters name="p" value="var:0"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

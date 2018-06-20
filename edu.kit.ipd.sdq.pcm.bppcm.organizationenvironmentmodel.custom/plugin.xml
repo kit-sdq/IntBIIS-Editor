@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.sirius.externalJavaAction">
+      <javaActions
+            actionClass="edu.kit.ipd.sdq.pcm.bppcm.sirius.externalactions.DeleteActorRoleRelation"
+            id="DeleteActorRoleRelation">
+      </javaActions>
+   </extension>
+   <extension
+         point="org.eclipse.sirius.externalJavaAction">
+      <javaActions
+            actionClass="edu.kit.ipd.sdq.pcm.bppcm.sirius.externalactions.ProcessWorkingPeriod"
+            id="IntBIISExternalActions.ProcessWorkingPeriod">
+      </javaActions>
+   </extension>
+
+</plugin>
