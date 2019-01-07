@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BP UsageModel Custom
+Bundle-SymbolicName: edu.kit.ipd.sdq.pcm.bppcm.bpusagemodel.custom;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: edu.kit.ipd.sdq.pcm.bppcm.bpusagemodel.custom.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.sirius,
+ org.eclipse.sirius,
+ org.palladiosimulator.editors.sirius.custom,
+ de.uka.ipd.sdq.stoex.analyser,
+ de.uhd.ifi.se.pcm.bppcm
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
