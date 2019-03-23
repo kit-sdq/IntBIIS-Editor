@@ -4,7 +4,13 @@
     <ownedRepresentationExtensions xsi:type="description_1:DiagramExtensionDescription" name="BPUsageModel Diagram" viewpointURI="viewpoint:/org.palladiosimulator.editors.sirius.usage/UsageModel" representationName="UsageModel Diagram">
       <metamodel href="http://palladiosimulator.org/PalladioComponentModel/5.2#//usagemodel"/>
       <layers name="BPUsageModel">
-        <edgeMappings name="InputDataObject" sourceMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subContainerMappings[name='ActorStep']" targetMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subNodeMappings[name='DataObjectNode%20Import']" targetFinderExpression="aql:self.inputDataObjects">
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="DataObjectNode Import">
+          <importedMapping href="../../edu.kit.ipd.sdq.pcm.bppcm.datamodel.design/description/datamodel.odesign#//@ownedViewpoints[name='datamodel.viewpoint']/@ownedRepresentations[name='datamodel.diagram']/@defaultLayer/@nodeMappings[name='DataObjectNode']"/>
+        </nodeMappings>
+        <nodeMappings xsi:type="description_1:NodeMappingImport" name="DeviceResource Import">
+          <importedMapping href="../../edu.kit.ipd.sdq.pcm.bppcm.organizationenvironmentmodel.design/description/organizationenvironmentmodel.odesign#//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@nodeMappings[name='DeviceNode']"/>
+        </nodeMappings>
+        <edgeMappings name="InputDataObject" sourceMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subContainerMappings[name='ActorStep']" targetMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@nodeMappings[name='DataObjectNode%20Import']" targetFinderExpression="aql:self.inputDataObjects">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -12,7 +18,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="OutputDataObject" sourceMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subContainerMappings[name='ActorStep']" targetMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subNodeMappings[name='DataObjectNode%20Import']" targetFinderExpression="aql:self.outputDataObjects">
+        <edgeMappings name="OutputDataObject" sourceMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subContainerMappings[name='ActorStep']" targetMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@nodeMappings[name='DataObjectNode%20Import']" targetFinderExpression="aql:self.outputDataObjects">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -28,7 +34,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="AcquireDevice Edge" sourceMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subContainerMappings[name='AcquireDeviceResourceAction']" targetMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subNodeMappings[name='DeviceResource%20Import']" targetFinderExpression="aql:self.passiveresource_AcquireAction">
+        <edgeMappings name="AcquireDevice Edge" sourceMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subContainerMappings[name='AcquireDeviceResourceAction']" targetMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@nodeMappings[name='DeviceResource%20Import']" targetFinderExpression="aql:self.passiveresource_AcquireAction">
           <style>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription>
@@ -36,7 +42,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="ReleaseDevice Edge" sourceMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subContainerMappings[name='ReleaseDeviceResourceAction']" targetMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subNodeMappings[name='DeviceResource%20Import']" targetFinderExpression="aql:self.passiveresource_ReleaseAction">
+        <edgeMappings name="ReleaseDevice Edge" sourceMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@containerMappings[name='UsageScenario%20Import']/@subContainerMappings[name='ScenarioBehaviour%20Import']/@subContainerMappings[name='ReleaseDeviceResourceAction']" targetMapping="//@ownedViewpoints[name='BPUsageModel']/@ownedRepresentationExtensions[name='BPUsageModel%20Diagram']/@layers[name='BPUsageModel']/@nodeMappings[name='DeviceResource%20Import']" targetFinderExpression="aql:self.passiveresource_ReleaseAction">
           <style>
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <centerLabelStyleDescription>
@@ -46,12 +52,6 @@
         </edgeMappings>
         <containerMappings xsi:type="description_1:ContainerMappingImport" name="UsageScenario Import">
           <subContainerMappings xsi:type="description_1:ContainerMappingImport" name="ScenarioBehaviour Import" semanticCandidatesExpression="aql:self.scenarioBehaviour_UsageScenario" domainClass="usagemodel::ScenarioBehaviour">
-            <subNodeMappings xsi:type="description_1:NodeMappingImport" name="DataObjectNode Import">
-              <importedMapping href="../../edu.kit.ipd.sdq.pcm.bppcm.datamodel.design/description/datamodel.odesign#//@ownedViewpoints[name='datamodel.viewpoint']/@ownedRepresentations[name='datamodel.diagram']/@defaultLayer/@nodeMappings[name='DataObjectNode']"/>
-            </subNodeMappings>
-            <subNodeMappings xsi:type="description_1:NodeMappingImport" name="DeviceResource Import" createElements="true">
-              <importedMapping href="../../edu.kit.ipd.sdq.pcm.bppcm.organizationenvironmentmodel.design/description/organizationenvironmentmodel.odesign#//@ownedViewpoints[name='organizationEnvironment']/@ownedRepresentations[name='OrganizationEnvironmentModel']/@defaultLayer/@nodeMappings[name='DeviceNode']"/>
-            </subNodeMappings>
             <reusedNodeMappings href="../../org.palladiosimulator.editors.sirius.usage/description/usage.odesign#//@ownedViewpoints[name='UsageModel']/@ownedRepresentations[name='UsageModel%20Diagram']/@defaultLayer/@containerMappings[name='usageScenario']/@subContainerMappings[name='scenarioBehavior']/@subNodeMappings[name='start']"/>
             <reusedNodeMappings href="../../org.palladiosimulator.editors.sirius.usage/description/usage.odesign#//@ownedViewpoints[name='UsageModel']/@ownedRepresentations[name='UsageModel%20Diagram']/@defaultLayer/@containerMappings[name='usageScenario']/@subContainerMappings[name='scenarioBehavior']/@subNodeMappings[name='stop']"/>
             <subContainerMappings name="ActivityContainer" semanticCandidatesExpression="aql:self.actions_ScenarioBehaviour" domainClass="bpusagemodel::Activity" childrenPresentation="VerticalStack">
